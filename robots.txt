@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://funht.com/sitemap.xml

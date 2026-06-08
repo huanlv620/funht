@@ -17,7 +17,7 @@
       content="FunHT Media, thiết kế website, landing page, quảng cáo Facebook, quảng cáo TikTok, marketing trọn gói, sản xuất video, chụp ảnh sản phẩm, agency Nghệ An"
     />
     <meta name="author" content="FunHT Media" />
-    <meta name="theme-color" content="#070b22" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://funht.com/" />
 
@@ -64,11 +64,11 @@
       content="https://funht.com/assets/imgs/funht-mat-tien-van-phong.jpg"
     />
 
-    <!-- ============ Fonts ============ -->
+    <!-- ============ Fonts (chỉ tải các weight thực sự dùng) ============ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -97,6 +97,7 @@
       rel="preload"
       as="image"
       href="assets/imgs/funht-mat-tien-van-phong.jpg"
+      fetchpriority="high"
     />
 
     <!-- ============ Structured Data (JSON-LD) ============ -->
@@ -288,6 +289,28 @@
       ::selection {
         background: var(--royal);
         color: #fff;
+      }
+
+      /* ---------- Accessibility ---------- */
+      :focus-visible {
+        outline: 3px solid var(--sky);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      .skip-link {
+        position: absolute;
+        left: 12px;
+        top: -64px;
+        z-index: 200;
+        background: var(--royal);
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: top 0.25s var(--ease);
+      }
+      .skip-link:focus {
+        top: 12px;
       }
 
       .wrap {
@@ -1589,6 +1612,7 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
     <!-- ===================== HEADER ===================== -->
     <header class="site">
       <div class="wrap nav">
@@ -1628,8 +1652,9 @@
 
     <span id="top"></span>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="hero">
+    <main id="main">
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" id="hero">
       <div class="wrap hero-grid">
         <div class="reveal">
           <span class="tag">🚀 Marketing trọn gói cho doanh nghiệp</span>
@@ -1700,7 +1725,7 @@
         </div>
         <div class="prob-grid">
           <div class="prob reveal">
-            <div class="x">😵‍💫</div>
+            <div class="x" aria-hidden="true">😵‍💫</div>
             <div>
               <h3>Quảng cáo tốn tiền nhưng ít khách</h3>
               <p>
@@ -1709,21 +1734,21 @@
             </div>
           </div>
           <div class="prob reveal">
-            <div class="x">🧭</div>
+            <div class="x" aria-hidden="true">🧭</div>
             <div>
               <h3>Website chưa giúp bán hàng</h3>
               <p>Có web nhưng khách vào rồi rời đi, không để lại thông tin.</p>
             </div>
           </div>
           <div class="prob reveal">
-            <div class="x">📷</div>
+            <div class="x" aria-hidden="true">📷</div>
             <div>
               <h3>Ảnh và video chưa đẹp</h3>
               <p>Tự làm nội dung nhưng nhìn chưa chuyên nghiệp, khó thu hút.</p>
             </div>
           </div>
           <div class="prob reveal">
-            <div class="x">🧩</div>
+            <div class="x" aria-hidden="true">🧩</div>
             <div>
               <h3>Phải làm việc với quá nhiều bên</h3>
               <p>
@@ -1757,7 +1782,7 @@
                 decoding="async"
               />
             </div>
-            <div class="ic">🌐</div>
+            <div class="ic" aria-hidden="true">🌐</div>
             <h3>Thiết kế Website &amp; Trang bán hàng</h3>
             <p class="desc">
               Web giới thiệu công ty và trang bán hàng giúp khách dễ xem, dễ
@@ -1787,7 +1812,7 @@
                 decoding="async"
               />
             </div>
-            <div class="ic">📈</div>
+            <div class="ic" aria-hidden="true">📈</div>
             <h3>Quảng cáo Facebook &amp; TikTok</h3>
             <p class="desc">
               Chạy quảng cáo đúng khách hàng, giúp bạn có nhiều đơn với chi phí
@@ -1817,7 +1842,7 @@
                 decoding="async"
               />
             </div>
-            <div class="ic">🎬</div>
+            <div class="ic" aria-hidden="true">🎬</div>
             <h3>Chụp ảnh, Quay video &amp; Nội dung</h3>
             <p class="desc">
               Hình ảnh và video đẹp, chuyên nghiệp để quảng cáo và bán hàng tốt
@@ -1848,27 +1873,27 @@
         </div>
         <div class="steps">
           <div class="step reveal">
-            <div class="n"></div>
+            <div class="n" aria-hidden="true"></div>
             <h3>Lắng nghe bạn</h3>
             <p>Tìm hiểu sản phẩm và mong muốn của bạn.</p>
           </div>
           <div class="step reveal">
-            <div class="n"></div>
+            <div class="n" aria-hidden="true"></div>
             <h3>Báo giá</h3>
             <p>Đưa ra giải pháp và mức giá phù hợp túi tiền.</p>
           </div>
           <div class="step reveal">
-            <div class="n"></div>
+            <div class="n" aria-hidden="true"></div>
             <h3>Bắt tay làm</h3>
             <p>Làm web, quảng cáo hoặc ảnh/video theo kế hoạch.</p>
           </div>
           <div class="step reveal">
-            <div class="n"></div>
+            <div class="n" aria-hidden="true"></div>
             <h3>Theo dõi &amp; chỉnh sửa</h3>
             <p>Xem kết quả và cải thiện liên tục.</p>
           </div>
           <div class="step reveal">
-            <div class="n"></div>
+            <div class="n" aria-hidden="true"></div>
             <h3>Báo cáo &amp; đồng hành</h3>
             <p>Báo cáo thường xuyên và hỗ trợ bạn lâu dài.</p>
           </div>
@@ -1885,7 +1910,7 @@
         </div>
         <div class="usp-grid">
           <div class="usp reveal">
-            <div class="ic">🎯</div>
+            <div class="ic" aria-hidden="true">🎯</div>
             <h3>Chỉ một nơi lo tất cả</h3>
             <p>
               Web, quảng cáo và hình ảnh do cùng một đội ngũ làm — bạn đỡ mất
@@ -1893,12 +1918,12 @@
             </p>
           </div>
           <div class="usp reveal">
-            <div class="ic">📊</div>
+            <div class="ic" aria-hidden="true">📊</div>
             <h3>Làm việc dựa trên kết quả</h3>
             <p>Mọi thứ đều có số liệu rõ ràng, không nói chung chung.</p>
           </div>
           <div class="usp reveal">
-            <div class="ic">🔗</div>
+            <div class="ic" aria-hidden="true">🔗</div>
             <h3>Thông điệp nhất quán</h3>
             <p>
               Web, quảng cáo và nội dung đồng bộ, giúp khách dễ nhớ thương hiệu
@@ -2229,7 +2254,7 @@
         </div>
         <div class="reviews">
           <div class="review reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars" role="img" aria-label="Đánh giá 5 trên 5 sao">★★★★★</div>
             <p>
               "Web mới giúp tôi có khách đều mỗi ngày. Đội ngũ làm việc chuyên
               nghiệp và trả lời rất nhanh."
@@ -2240,7 +2265,7 @@
             </div>
           </div>
           <div class="review reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars" role="img" aria-label="Đánh giá 5 trên 5 sao">★★★★★</div>
             <p>
               "Chi phí quảng cáo giảm hẳn mà đơn hàng lại tăng. Báo cáo rõ ràng
               nên tôi rất yên tâm."
@@ -2251,7 +2276,7 @@
             </div>
           </div>
           <div class="review reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars" role="img" aria-label="Đánh giá 5 trên 5 sao">★★★★★</div>
             <p>
               "Video bên này làm rất đẹp và đúng ý. Một nơi lo cả web, quảng cáo
               lẫn hình ảnh nên rất tiện."
@@ -2394,7 +2419,7 @@
           <div class="quick">
             <!-- Cập nhật số hotline / Zalo / email thật vào href bên dưới -->
             <a href="tel:0932365698" onclick="trackCallClick()"
-              ><span class="ic">📞</span
+              ><span class="ic" aria-hidden="true">📞</span
               ><span><b>Gọi ngay</b><small>0932 365 698</small></span></a
             >
             <a
@@ -2402,14 +2427,14 @@
               target="_blank"
               rel="noopener"
               onclick="trackZaloClick()"
-              ><span class="ic">💬</span
+              ><span class="ic" aria-hidden="true">💬</span
               ><span
                 ><b>Chat Zalo</b
                 ><small>Phản hồi nhanh trong giờ làm việc</small></span
               ></a
             >
             <a href="mailto:contact@funht.media"
-              ><span class="ic">✉️</span
+              ><span class="ic" aria-hidden="true">✉️</span
               ><span><b>Email</b><small>contact@funht.media</small></span></a
             >
           </div>
@@ -2419,20 +2444,28 @@
         <div>
           <form class="lead" id="leadForm" novalidate>
             <div class="field">
-              <label for="name">Họ và tên <span class="req">*</span></label>
+              <label for="name"
+                >Họ và tên <span class="req" aria-hidden="true">*</span></label
+              >
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Nguyễn Văn A"
                 autocomplete="name"
+                required
+                aria-required="true"
+                aria-describedby="nameErr"
               />
-              <div class="err">Vui lòng nhập họ và tên.</div>
+              <div class="err" id="nameErr" role="alert">
+                Vui lòng nhập họ và tên.
+              </div>
             </div>
             <div class="row2">
               <div class="field">
                 <label for="phone"
-                  >Số điện thoại <span class="req">*</span></label
+                  >Số điện thoại
+                  <span class="req" aria-hidden="true">*</span></label
                 >
                 <input
                   type="tel"
@@ -2441,8 +2474,13 @@
                   placeholder="09xx xxx xxx"
                   autocomplete="tel"
                   inputmode="tel"
+                  required
+                  aria-required="true"
+                  aria-describedby="phoneErr"
                 />
-                <div class="err">Số điện thoại không hợp lệ (9–11 chữ số).</div>
+                <div class="err" id="phoneErr" role="alert">
+                  Số điện thoại không hợp lệ (9–11 chữ số).
+                </div>
               </div>
               <div class="field">
                 <label for="email">Email</label>
@@ -2452,8 +2490,11 @@
                   name="email"
                   placeholder="ban@email.com"
                   autocomplete="email"
+                  aria-describedby="emailErr"
                 />
-                <div class="err">Email không hợp lệ.</div>
+                <div class="err" id="emailErr" role="alert">
+                  Email không hợp lệ.
+                </div>
               </div>
             </div>
             <div class="field">
@@ -2538,13 +2579,25 @@
             </div>
 
             <label class="consent">
-              <input type="checkbox" id="consent" name="consent" />
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+                aria-required="true"
+                aria-describedby="consentErr"
+              />
               <span
                 >Tôi đồng ý để FunHT Media liên hệ tư vấn qua điện thoại / Zalo
                 / email.</span
               >
             </label>
-            <div class="err" id="consentErr" style="margin: -12px 0 14px">
+            <div
+              class="err"
+              id="consentErr"
+              role="alert"
+              style="margin: -12px 0 14px"
+            >
               Vui lòng đồng ý để chúng tôi liên hệ tư vấn.
             </div>
 
@@ -2555,7 +2608,7 @@
 
           <!-- THANK-YOU STATE -->
           <div class="thanks" id="thanks" role="status" aria-live="polite">
-            <div class="check-ic">✓</div>
+            <div class="check-ic" aria-hidden="true">✓</div>
             <h3>Cảm ơn bạn! 🎉</h3>
             <p>
               Yêu cầu của bạn đã được gửi thành công. FunHT Media sẽ liên hệ tư
@@ -2568,6 +2621,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="site" id="footer">
@@ -2887,6 +2941,7 @@
 
       function setInvalid(input, bad) {
         input.closest(".field").classList.toggle("invalid", bad);
+        input.setAttribute("aria-invalid", bad ? "true" : "false");
       }
 
       form.addEventListener("submit", function (ev) {
