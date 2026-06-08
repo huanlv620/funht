@@ -1,0 +1,16 @@
+# Image optimization tooling (Node + sharp) — not part of the site
+.imgtool/
+
+# High-res source photos (6–9 MB each). The site serves the optimized
+# funht-*.jpg versions instead. Keep these locally as originals; don't deploy.
+assets/imgs/img_01.jpg
+assets/imgs/img_02.jpg
+assets/imgs/img_03.JPG
+assets/imgs/img_04.JPG
+assets/imgs/bg.jpg
+assets/imgs/devFun.jpg
+assets/imgs/devFunImg.jpg
+
+# OS / editor
+Thumbs.db
+.DS_Store
