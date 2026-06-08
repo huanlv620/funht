@@ -6,7 +6,7 @@
 
     <!-- ============ SEO / Open Graph ============ -->
     <title>
-      FunHT Media — Thiết kế Web · Quảng cáo Facebook/TikTok · Media trọn gói
+      FunHT Media — Thiết kế Web, Quảng cáo Facebook/TikTok, Media
     </title>
     <meta
       name="description"
@@ -1608,6 +1608,30 @@
         border: 0;
         display: block;
       }
+      .map-link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--royal);
+      }
+      .map-link:hover {
+        text-decoration: underline;
+      }
+      /* Khối giới thiệu (text) */
+      .about-box {
+        max-width: 860px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .about-box p {
+        color: var(--muted);
+        font-size: 16px;
+        margin-top: 14px;
+      }
+      .about-box p + p {
+        margin-top: 14px;
+      }
     </style>
   </head>
 
@@ -1712,6 +1736,30 @@
             <span>📈 Quảng cáo</span>
             <span>🎬 Ảnh &amp; Video</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GIỚI THIỆU (VỀ FUNHT MEDIA) ===================== -->
+    <section id="gioithieu">
+      <div class="wrap">
+        <div class="sec-head center about-box reveal">
+          <span class="tag">Về chúng tôi</span>
+          <h2>FunHT Media — đồng hành marketing cùng doanh nghiệp Việt</h2>
+          <p>
+            FunHT Media là đơn vị truyền thông – marketing trọn gói đặt tại
+            Quỳnh Lưu, Nghệ An. Chúng tôi giúp các doanh nghiệp, cửa hàng và
+            thương hiệu địa phương xây dựng website bán hàng, chạy quảng cáo
+            Facebook &amp; TikTok ra khách thật, cùng dịch vụ chụp ảnh và quay
+            video chuyên nghiệp.
+          </p>
+          <p>
+            Điểm khác biệt của chúng tôi là gói trọn Website – Quảng cáo – Hình
+            ảnh trong cùng một đội ngũ, giúp bạn tiết kiệm thời gian và đồng bộ
+            thông điệp thương hiệu. Với phương châm minh bạch và đo lường được,
+            FunHT Media luôn báo cáo kết quả rõ ràng để bạn yên tâm đầu tư và
+            phát triển bền vững.
+          </p>
         </div>
       </div>
     </section>
@@ -2666,14 +2714,36 @@
           <a href="#dichvu">Chụp ảnh &amp; Quay video</a>
           <a href="#baogia">Bảng báo giá</a>
         </div>
-        <div class="links">
+        <div
+          class="links"
+          itemscope
+          itemtype="https://schema.org/LocalBusiness"
+        >
           <h4>Liên hệ</h4>
-          <a href="tel:0932365698" onclick="trackCallClick()"
+          <meta itemprop="name" content="FunHT Media" />
+          <meta
+            itemprop="url"
+            content="https://funht.com/"
+          />
+          <a
+            href="tel:0932365698"
+            onclick="trackCallClick()"
+            itemprop="telephone"
             >📞 0932 365 698</a
           >
-          <a href="mailto:contact@funht.media">✉️ contact@funht.media</a>
-          <p style="margin-top: 9px">
-            📍 Thôn Hồng Long, xã Quỳnh Lưu, tỉnh Nghệ An
+          <a href="mailto:contact@funht.media" itemprop="email"
+            >✉️ contact@funht.media</a
+          >
+          <p
+            style="margin-top: 9px"
+            itemprop="address"
+            itemscope
+            itemtype="https://schema.org/PostalAddress"
+          >
+            📍 <span itemprop="streetAddress">Thôn Hồng Long</span>,
+            <span itemprop="addressLocality">xã Quỳnh Lưu</span>,
+            <span itemprop="addressRegion">tỉnh Nghệ An</span>,
+            <span itemprop="addressCountry">Việt Nam</span>
           </p>
           <p style="margin-top: 9px">🧾 MST: 2902272206</p>
         </div>
@@ -2688,6 +2758,13 @@
               allowfullscreen
             ></iframe>
           </div>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Qu%E1%BB%B3nh+L%C6%B0u,+Ngh%E1%BB%87+An"
+            target="_blank"
+            rel="noopener"
+            >🗺️ Xem đường đi tới văn phòng FunHT Media trên Google Maps</a
+          >
         </div>
       </div>
       <div class="wrap">
